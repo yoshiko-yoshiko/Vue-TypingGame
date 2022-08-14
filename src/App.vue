@@ -37,11 +37,9 @@ export default {
     const startGame = (e) => {
       // ボタン押されたか判定
       if (e.key !== "Enter") return;
-      else {
-        playing.value = true;
-      } // startGame関数のキーイベント発火
-      addEventListener("keydown", startGame);
+      playing.value = true;
     };
+    addEventListener("keydown", startGame);
     return {
       ...toRefs(InitData),
       playing,
